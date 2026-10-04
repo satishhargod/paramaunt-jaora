@@ -1,0 +1,413 @@
+// =====================================================
+//  navbar.scss  –  redesigned: "Notebook & Marigold"
+// =====================================================
+
+$ink : #1B2E28;
+$paper : #F7F4EC;
+$forest : #2F6F52;
+$forest-dk : #1F4D3A;
+$marigold : #E7A93D;
+$muted : #4B5D57;
+$line : #E4DFD1;
+$white : #ffffff;
+$shadow : 0 16px 40px rgba(27, 46, 40, 0.10);
+
+.navbarp {
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid $line;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  overflow: visible;
+}
+
+.navContainerRT {
+  margin: auto;
+  padding: 10px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0;
+  overflow: visible;
+  position: relative;
+}
+
+.logoimg {
+  width: 220px;
+}
+
+.desktop-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 14px;
+}
+
+// ── Top info strip ─────────────────────────────────
+.topMenu {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: 'Space Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+
+  li a {
+    text-decoration: none;
+    color: $muted;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.25s;
+
+    &:hover {
+      color: $forest;
+    }
+  }
+
+  .admissionText a {
+    display: inline-flex;
+    align-items: center;
+    background: $marigold;
+    color: $ink !important;
+    font-weight: 700;
+    padding: 5px 14px;
+    border-radius: 999px;
+    animation: pulseBadge 2.2s ease-in-out infinite;
+  }
+}
+
+@keyframes pulseBadge {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(231, 169, 61, 0.45);
+  }
+
+  50% {
+    box-shadow: 0 0 0 6px rgba(231, 169, 61, 0);
+  }
+}
+
+// ── Main nav row ────────────────────────────────────
+.bottomMenu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+
+  >li>a,
+  .nb-top-link {
+    text-decoration: none;
+    color: $ink;
+    padding: 10px 14px;
+    display: inline-block;
+    letter-spacing: 0.2px;
+    transition: color 0.25s;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 14px;
+      right: 14px;
+      bottom: 4px;
+      height: 2px;
+      background: $marigold;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.25s ease;
+    }
+
+    &:hover {
+      color: $forest;
+    }
+  }
+
+  >li:hover>.nb-top-link::after {
+    transform: scaleX(1);
+  }
+}
+
+.admit-btn {
+  background: $forest;
+  color: $white !important;
+  padding: 10px 20px !important;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-left: 8px;
+  transition: background 0.25s, transform 0.2s;
+  white-space: nowrap;
+
+  &:hover {
+    background: $forest-dk;
+    transform: translateY(-1px);
+  }
+
+  &::after {
+    display: none !important;
+  }
+}
+
+// ── Dropdown ────────────────────────────────────────
+.nb-has-drop {
+  position: relative;
+  overflow: visible;
+}
+
+.nb-top-btn,
+.nb-sub-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  color: $ink;
+  padding: 10px 14px;
+  transition: color 0.25s;
+  white-space: nowrap;
+
+  &:hover {
+    color: $forest;
+  }
+}
+
+.nb-sub-btn {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 11px 18px;
+  width: 100%;
+  text-align: left;
+  justify-content: space-between;
+  border-left: 3px solid transparent;
+
+  &:hover {
+    background: $paper;
+    color: $forest;
+    border-left-color: $marigold;
+  }
+}
+
+.nb-drop {
+  position: absolute;
+  min-width: 240px;
+  background: $white;
+  border: 1px solid $line;
+  border-radius: 12px;
+  box-shadow: $shadow;
+  padding: 8px 0;
+  list-style: none;
+  z-index: 1000;
+  overflow: visible;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
+  pointer-events: none;
+
+  &--open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  li>a {
+    display: block;
+    padding: 11px 18px;
+    font-size: 14px;
+    color: $ink;
+    text-decoration: none;
+    white-space: nowrap;
+    border-left: 3px solid transparent;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+
+    &:hover {
+      background: $paper;
+      color: $forest;
+      border-left-color: $marigold;
+    }
+  }
+
+  &--down {
+    top: calc(100% + 10px);
+    left: 0;
+  }
+
+  &--right {
+    top: -8px;
+    left: calc(100% + 2px);
+    transform: translateX(-6px);
+
+    &.nb-drop--open {
+      transform: translateX(0);
+    }
+  }
+}
+
+.add-scroll {
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.nb-sub-drop {
+  position: relative;
+  overflow: visible !important;
+}
+
+.nb-divider {
+  height: 1px;
+  background: $line;
+  margin: 6px 0;
+}
+
+// ── Hamburger ───────────────────────────────────────
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  padding: 4px;
+
+  span {
+    display: block;
+    width: 26px;
+    height: 2.5px;
+    background: $ink;
+    border-radius: 2px;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+
+  &--open {
+    span:nth-child(1) {
+      transform: translateY(7.5px) rotate(45deg);
+    }
+
+    span:nth-child(2) {
+      opacity: 0;
+    }
+
+    span:nth-child(3) {
+      transform: translateY(-7.5px) rotate(-45deg);
+    }
+  }
+}
+
+.mobile-wrapper {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .logoimg {
+    width: 160px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .desktop-wrapper {
+    display: none;
+  }
+
+  .mobile-wrapper {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: $white;
+    border-top: 3px solid $marigold;
+    box-shadow: $shadow;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    z-index: 999;
+
+    &--open {
+      max-height: 90vh;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+  }
+
+  .topMenu--mob {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 16px 20px;
+    border-bottom: 1px solid $line;
+    font-size: 12px;
+  }
+
+  .nb-mob-menu {
+    list-style: none;
+    padding: 10px 0 20px;
+    margin: 0;
+  }
+
+  .nb-mob-link,
+  .nb-mob-btn {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: $ink;
+    text-decoration: none;
+    background: none;
+    border: none;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: color 0.2s, background 0.2s;
+
+    &:hover,
+    &--open {
+      color: $forest;
+      background: $paper;
+    }
+  }
+
+  .nb-mob-chevron {
+    transition: transform 0.3s;
+
+    &--open {
+      transform: rotate(180deg);
+    }
+  }
+
+  .nb-mob-sub {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #FBF9F3;
+    border-left: 3px solid $marigold;
+    margin-left: 20px;
+  }
+
+  .admit-btn--mob {
+    display: block;
+    margin: 12px 20px 4px;
+    text-align: center;
+  }
+}

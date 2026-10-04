@@ -1,0 +1,107 @@
+.stats-section {
+  padding: 80px 24px;
+  background: linear-gradient(180deg, #f1f5f9 0%, #ffffff 100%);
+  position: relative;
+}
+
+.stats-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.stat-box {
+  background: #ffffff;
+  padding: 36px 24px;
+  text-align: center;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 10px 30px rgba(15, 43, 32, 0.05);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .stat-icon-wrapper {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: rgba(245, 158, 11, 0.12);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    transition: transform 0.3s ease;
+
+    .stat-lucide-icon {
+      color: #d97706;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(15, 43, 32, 0.1);
+    border-color: #cbd5e1;
+
+    .stat-icon-wrapper {
+      transform: scale(1.1);
+      background: rgba(22, 66, 48, 0.1);
+      border-color: rgba(22, 66, 48, 0.2);
+
+      .stat-lucide-icon {
+        color: #164230;
+      }
+    }
+  }
+
+  h2 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 6px;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.1;
+  }
+
+  p {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    color: #64748b;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0;
+  }
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+  .stats-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+
+  .stat-box {
+    padding: 28px 20px;
+
+    h2 {
+      font-size: 34px;
+    }
+  }
+}
+
+/* MOBILE */
+@media (max-width: 520px) {
+  .stats-container {
+    grid-template-columns: 1fr;
+  }
+
+  .stat-box h2 {
+    font-size: 32px;
+  }
+}
+

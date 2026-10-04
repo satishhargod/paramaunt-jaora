@@ -1,0 +1,323 @@
+.leadership {
+  --paper: #f8fafc;
+  --card: #ffffff;
+  --ink: #0f172a;
+  --ink-soft: #475569;
+  --primary: #164230;
+  --primary-deep: #0b1e16;
+  --gold: #f59e0b;
+  --gold-dark: #d97706;
+  --border: #e2e8f0;
+
+  padding: 90px 24px 80px;
+  background: var(--paper);
+  background-image: radial-gradient(circle at 100% 0%, rgba(245, 158, 11, 0.05), transparent 45%);
+  font-family: 'Inter', -apple-system, sans-serif;
+
+  &__header {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+
+  &__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary);
+    background: rgba(22, 66, 48, 0.08);
+    border: 1px solid rgba(22, 66, 48, 0.16);
+    padding: 6px 16px;
+    border-radius: 999px;
+    margin: 0 auto 14px;
+  }
+
+  &__title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 0;
+
+    span {
+      color: var(--primary);
+      font-style: italic;
+    }
+  }
+
+  // ── Tabs ──
+  &__tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    max-width: 800px;
+    margin: 0 auto -1px;
+    padding: 0 8px;
+    position: relative;
+    z-index: 2;
+  }
+
+  &__tab {
+    position: relative;
+    flex: 1;
+    max-width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e2e8f0;
+    border: 1px solid var(--border);
+    border-bottom: none;
+    border-radius: 14px 14px 0 0;
+    padding: 14px 20px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.25s ease;
+
+    &:hover:not(.is-active) {
+      background: #edf2f7;
+    }
+
+    &.is-active {
+      background: var(--card);
+      border-color: #cbd5e1;
+      transform: translateY(-2px);
+      box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.04);
+    }
+  }
+
+  &__tab-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+
+  &__tab-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  &__tab-role {
+    font-size: 11.5px;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+
+  &__tab-progress {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0%;
+    background: var(--gold);
+    animation: fillProgress 10s linear forwards;
+  }
+
+  @keyframes fillProgress {
+    from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+  // ── Letter card ──
+  &__letter {
+    position: relative;
+    max-width: 1140px;
+    margin: 0 auto;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: 0 20px 45px rgba(15, 43, 32, 0.07);
+    padding: 48px;
+    display: flex;
+    gap: 45px;
+    align-items: flex-start;
+  }
+
+  &__portrait-wrap {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  &__portrait {
+    width: 260px;
+    height: 330px;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 12px 30px rgba(15, 43, 32, 0.12);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+
+      &:hover {
+        transform: scale(1.04);
+      }
+    }
+  }
+
+  &__portrait-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(22, 66, 48, 0.08);
+    border: 1px solid rgba(22, 66, 48, 0.2);
+    color: var(--primary);
+    padding: 5px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  &__body {
+    position: relative;
+    flex: 1;
+    min-width: 0;
+  }
+
+  &__quote-icon-box {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: rgba(245, 158, 11, 0.12);
+    border: 1px solid rgba(245, 158, 11, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+
+    .leadership__quote-lucide {
+      color: var(--gold-dark);
+    }
+  }
+
+  &__heading {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--ink);
+    margin: 0 0 18px;
+  }
+
+  &__quote {
+    margin: 0 0 18px;
+    padding: 0 0 0 18px;
+    border-left: 3px solid var(--gold);
+    font-family: 'Fraunces', Georgia, serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--primary-deep);
+  }
+
+  &__simple {
+    margin: 0 0 24px;
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--ink-soft);
+  }
+
+  &__signoff {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding-top: 16px;
+    border-top: 1px dashed var(--border);
+  }
+
+  &__signoff-name {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  &__signoff-role {
+    font-size: 12.5px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+    font-weight: 600;
+  }
+
+  // ── CTA ──
+  &__cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  &__cta-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--primary);
+    color: #ffffff;
+    padding: 13px 28px;
+    border-radius: 999px;
+    font-size: 14.5px;
+    font-weight: 600;
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(22, 66, 48, 0.25);
+    transition: all 0.25s ease;
+
+    &:hover {
+      background: var(--primary-deep);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(22, 66, 48, 0.35);
+      color: #ffffff;
+    }
+  }
+}
+
+// ── Mobile ──
+@media (max-width: 900px) {
+  .leadership {
+    padding: 60px 16px;
+
+    &__title {
+      font-size: 28px;
+    }
+
+    &__tabs {
+      overflow-x: auto;
+      justify-content: flex-start;
+    }
+
+    &__tab {
+      min-width: 160px;
+      padding: 10px 14px;
+    }
+
+    &__letter {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    &__quote {
+      text-align: left;
+    }
+
+    &__signoff {
+      align-items: center;
+    }
+  }
+}
