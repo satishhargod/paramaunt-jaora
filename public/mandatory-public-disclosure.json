@@ -1,0 +1,193 @@
+{
+    "generalInfo": [
+        {
+            "label": "Name Of The School",
+            "value": "Paramount Academy Jaora"
+        },
+        {
+            "label": "Affiliation No.(If Applicable)",
+            "value": "-"
+        },
+        {
+            "label": "School Code (If Applicable)",
+            "value": "-"
+        },
+        {
+            "label": "Complete Address With Pin Code",
+            "value": "Banna Kheda Road, Jaora, Madhya Pradesh - 457226"
+        },
+        {
+            "label": "Principal Name",
+            "value": "Mr. Amit Jain"
+        },
+        {
+            "label": "Principal's Qualification",
+            "value": "M.S.C,  M.E.D"
+        },
+        {
+            "label": "School Email Id",
+            "value": "jaoraparamountacademy@gmail.com"
+        },
+        {
+            "label": "Contact Details",
+            "value": "+919685137237"
+        }
+    ],
+    "documentsSectionOne": [
+        {
+            "label": "Copies of affiliation/upgraded letter and recent extension of affiliation, if any",
+            "linkText": "Coming Soon",
+            "href": null
+        },
+        {
+            "label": "Copies of societies/trust/company registration/renewal certificate, as applicable",
+            "linkText": "Society Registration",
+            "href": "/documents/society-registration.pdf"
+        },
+        {
+            "label": "Copy of no objection certificate (NOC) issued, if applicable, by the state govt./UT",
+            "linkText": "Coming Soon",
+            "href": null
+        },
+        {
+            "label": "Copies of recognition certificate under RTE ACT, 2009, and it's renewal if applicable",
+            "linkText": "Coming Soon",
+            "href": null
+        },
+        {
+            "label": "Copy of valid building safety certificate as per the national building",
+            "linkText": "Building Safety Certificate",
+            "href": "/documents/building-safety-certificate.jpg"
+        },
+        {
+            "label": "Copy of the DEO certificate submitted by the school for affiliation/upgraded/extension of affiliation or self certification by school",
+            "linkText": "Coming Soon",
+            "href": null
+        },
+        {
+            "label": "Copies of valid water, health and sanitation certificates",
+            "linkText": "Water certificate",
+            "href": "/documents/Water certificate.jpg"
+        }
+    ],
+    "documentsSectionTwo": [
+        {
+            "label": "Fee structure of the school",
+            "links": [
+                {
+                    "linkText": "Fees Structure 2026-27",
+                    "href": "/documents/fees-structure.jpg"
+                }
+            ]
+        },
+        {
+            "label": "Annual Academic Calendar",
+            "links": [
+                {
+                    "linkText": "Coming Soon",
+                    "href": null
+                }
+            ]
+        },
+        {
+            "label": "List of School Management Committee (SMC)",
+            "links": [
+                {
+                    "linkText": "Coming Soon",
+                    "href": null
+                }
+            ]
+        },
+        {
+            "label": "List of Parents Teachers Association (PTA) members",
+            "links": [
+                {
+                    "linkText": "Coming Soon",
+                    "href": null
+                }
+            ]
+        },
+        {
+            "label": "Last three-year result of the board examination as per applicability",
+            "links": [
+                {
+                    "linkText": "Coming Soon",
+                    "href": null
+                }
+            ]
+        }
+    ],
+    "staffInfo": [
+        {
+            "label": "Principal",
+            "value": "Mr. Amit Jain"
+        },
+        {
+            "label": "Total No. of Teachers",
+            "value": "18"
+        },
+        {
+            "label": "PPRT",
+            "value": "03"
+        },
+        {
+            "label": "PRT",
+            "value": "04"
+        },
+        {
+            "label": "TGT",
+            "value": "05"
+        },
+        {
+            "label": "PGT",
+            "value": "01"
+        },
+        {
+            "label": "Activity Teacher",
+            "value": "01"
+        },
+        {
+            "label": "Physical Health Education",
+            "value": "01"
+        },
+        {
+            "label": "Teachers Section Ratio",
+            "value": "1:2"
+        },
+        {
+            "label": "Details of Counsellor And Wellness Teacher",
+            "value": "01"
+        }
+    ],
+    "infrastructureInfo": [
+        {
+            "label": "Total campus area of the school (in square mtr)",
+            "value": "125500"
+        },
+        {
+            "label": "No. And size of the class rooms (in sq. ft.)",
+            "value": "-"
+        },
+        {
+            "label": "No. of laboratories including computer labs",
+            "value": "2"
+        },
+        {
+            "label": "Internet Facility (Y/N)",
+            "value": "Y"
+        },
+        {
+            "label": "No. Of Girls Toilets",
+            "value": "5"
+        },
+        {
+            "label": "No. Of Boys Toilets",
+            "value": "7"
+        },
+        {
+            "label": "Link of YouTube video of the inspection of school covering the infrastructure of the school",
+            "value": "Watch Video",
+            "href": "https://youtu.be/7DS6yh6JFE4?si=hk54zjafs-sezIzS"
+        }
+    ]
+}
